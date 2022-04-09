@@ -2,7 +2,6 @@ import { getMoveAsString, Move } from "./enums";
 import { State } from "./interfaces";
 
 function getWinner(squares: Move[]): string | null {
-  console.log(squares);
   const lines = [
     [0, 1, 2],
     [3, 4, 5],
@@ -35,7 +34,6 @@ export function play(position: number, state: State): State {
   newState.squares[position] = move;
 
   const winner = getWinner(newState.squares);
-  console.log(winner);
   if (winner) {
     newState.finished = true;
     newState.status = `Winner ${winner}`;

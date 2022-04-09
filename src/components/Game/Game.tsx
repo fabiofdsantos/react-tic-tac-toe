@@ -23,7 +23,6 @@ export function Game() {
       return;
     }
 
-    // Play
     const newState = play(i, state);
     setState(newState);
   };
